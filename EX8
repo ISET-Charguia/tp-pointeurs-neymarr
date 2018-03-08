@@ -1,0 +1,53 @@
+#include <stdio.h>
+/*Permuter deux entiers A et B */
+void permuter(int *A,int *B)
+{
+int AIDE;
+AIDE=*A;
+*A=*B;
+*B=AIDE;
+}
+/*Lecture des élèments d'un tableau d'entier TAB de taille N */
+void Lecture_tab(int N,int *P,int TAB[])
+{
+for(P=TAB;P<TAB+N;P++)
+{
+printf("Entrez élèment :");
+scanf("%d",P);
+}
+}
+/*inverser un tableau TAB de taille N d'une manière symértique */
+void Inverser_tab(int N , int *P1, int *P2,int TAB[])
+{
+for(P1=TAB, P2=TAB+(N-1);P1<P2;P1++,P2--)
+{
+int AIDE;
+AIDE=*P1;
+*P1=*P2;
+*P2=AIDE;
+}
+}
+/*afficher des elements d'un tableau*/
+void Affichage_tab(int N,int TAB[],int *P)
+{
+for(P=TAB;P<TAB+N;P++)
+printf("%d",*P);
+printf("\n");
+}
+int main(void)
+{
+int A,B,N,TAB[50],*P,*P1,*P2;
+do{
+puts("donner la taille du tableau:");
+scanf("%d",&N);
+}while(N>50);
+puts("Donner A:");
+scanf("%d",&A);
+puts("Donner B:");
+scanf("%d",&B);
+permuter(*A,*B);
+Lecture_tab(N,*P,TAB);
+Inverser_tabN ,*P1,*P2,TAB);
+Affichage_tab(N,TAB,*P);
+return 0;
+}
