@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(void)
+{
+ char CH[50]; 
+ char *P1,*P2; 
+ int pal;    
+	/*lit une chaine de caractère*/
+ printf("Entrez une chaine de caractere :\n");
+ gets(CH);
+ for (P2=CH; *P2; P2++) ;
+ P2--;
+ pal=1;
+ for (P1=CH ;  pal&& P1<P2 ; P1++,P2--)
+      if (*P1 != *P2)  
+			pal=0;
+ if ( pal)
+    printf("La chaîne \"%s\" est un palindrome.\n", CH);
+ else
+    printf("La chaîne \"%s\" n'est pas un palindrome.\n", CH);
+ return 0;
+}
