@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(void)
+{
+
+ int CH[50];      
+ int *P; 
+int L=0;  
+ /* lit une chaine de caractère */
+ printf("Donner  une chaine de caractère : ");
+ scanf("%s", &CH);
+	/*determiner la longueur de la chaine*/ 
+P=CH;
+	while(*P!='\0')
+	{
+		L++;
+		P++;
+     }
+
+      printf("La longueur de la chaine est %d\n",L);
+ return 0;
+}
